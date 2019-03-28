@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+	<!-- 自动扫描(自动注入) -->
+	<context:component-scan base-package="com.xilin.controller"/>
+
+	<mvc:resources mapping="/resource/**/**" location="/resource/" />
+
+	<!-- 这个一定得有，注意了，如果其他配置也有需要这个，已经配置了，那不必了 -->
+	<mvc:annotation-driven >
+		<!-- 自定义消息转换器 -->
+		<mvc:message-converters register-defaults="false">
+			<!--spring消息转换器 -->
+			<bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
+			<bean class="org.springframework.http.converter.BufferedImageHttpMessageConverter"/>
+			<!--解决@Responcebody中文乱码问题 -->
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<constructor-arg value="UTF-8"/>
+			</bean>
+			<bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+				<property name="supportedMediaTypes" value="text/html;charset=UTF-8"/>
+				<property name="features">
+					<array>
+						<value>QuoteFieldNames</value>
+						<value>WriteDateUseDateFormat</value>
+						<!-- 将Collection类型字段的字段空值输出为[] -->
+						<value>WriteNullListAsEmpty</value>
+						<!-- 将字符串类型字段的空值输出为空字符串 "" -->
+						<value>WriteNullStringAsEmpty</value>
+						<!-- 将Boolean类型字段的空值输出为false -->
+						<value>WriteNullBooleanAsFalse</value>
+					</array>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<!--===============通用视图解析器 begin===============-->
+	<!-- 配置freeMarker视图解析器 -->
+	<bean id="viewResolverFtl" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"/>
+		<property name="contentType" value="text/html; charset=utf-8"/>
+		<property name="cache" value="false" />
+		<property name="suffix" value=".ftl" />
+		<property name="order" value="0"/>
+	</bean>
+	<!-- 配置freeMarker的模板路径 -->
+	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLoaderPath">
+			<value>/WEB-INF/page/</value>
+		</property>
+		<property name="defaultEncoding">
+			<value>utf-8</value>
+		</property>
+		<property name="freemarkerSettings">
+			<props>
+				<!--刷新模板的周期，单位为秒-->
+				<prop key="template_update_delay">0</prop>
+				<!-- 此属性可以防止模板解析空值时的错误  -->
+				<prop key="classic_compatible">true</prop>
+				<!--模板的编码格式 -->
+				<prop key="defaultEncoding">utf-8</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
