@@ -14,7 +14,7 @@
 ![](http://sowcar.com/t6/691/1553764620x2890149536.png)
 <br><br>
 7.项目遇到任何问题，启动不了的同学请联系我，我会提供相应支持。<br><br>
-QQ群号： 259217951
+QQ群号： 259217951 <br>
 QQ:  971886506 <br>
 WeChat: zwj971886506 <br>
 Email:  zhangwenjunp@126.com<br><br>
