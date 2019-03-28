@@ -14,9 +14,10 @@
 ![](http://sowcar.com/t6/691/1553764620x2890149536.png)
 <br><br>
 7.项目遇到任何问题，启动不了的同学请联系我，我会提供相应支持。<br><br>
-QQ:971886506 <br>
-WeChat:zwj971886506 <br>
-Email:zhangwenjunp@126.com<br><br>
+QQ群号： 259217951
+QQ:  971886506 <br>
+WeChat: zwj971886506 <br>
+Email:  zhangwenjunp@126.com<br><br>
 8.可能遇到的错误:<br>
   1.代码没有生成到项目文件中，确认你generatorConfig.properties配置文件中project.file.path的配置，一定要确保和你项目同路径，否则代码会生成到磁盘其他路径特别注意！！！<br><br>
   2.项目读取不到generatorConfig.properties和properties文件夹下的配置文件，确认你maven是否配置了打包过滤，编译后的文件中是否存在这些配置文件<br><br>
@@ -26,4 +27,6 @@ Email:zhangwenjunp@126.com<br><br>
 <br>
 ## 三.说明与结语<br>
 本项目开源旨在，解决日常工作、练习中代码的重复工作量，充分利用开发着的时间去写更多的业务代码，而不是一成不变的curd。<br>
-有问题或者有任何疑问请加QQ：971886506 包括你运行项目的问题，各种问题。我会一一回复你们。如果觉得代码生成器好用，请不要吝啬你的小星星，帮我点点star  thanks~~ 那将会是支持我前进的源动力！
+有问题或者有任何疑问请加QQ：971886506 包括你运行项目的问题，各种问题。我会一一回复你们。如果觉得代码生成器好用，请不要吝啬你的小星星，帮我点点star  thanks~~ 那将会是支持我前进的源动力！<br>
+特别鸣谢SoJson群提供的平台，另外推荐一个特别好用的Json工具解析站，https://www.sojson.com
+
