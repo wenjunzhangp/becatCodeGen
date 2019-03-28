@@ -1,17 +1,17 @@
 # 简单好用的强大代码生成器！！
 <br><br>
 ## 一.部署项目<br>
-1.安装IDEA、JDK、Maven、Tomcat等基础环境。<br>
-2.项目导入idea，修改/src/main/resources/properties/jdbc.properties配置文件信息，将数据库连接改成你本地的数据库。<br>
-3.修改/src/test/resources/generatorConfig.properties配置文件，此配置文件为代码生成器配置文件，具体修改内容请看注释。<br>
+1.安装IDEA、JDK、Maven、Tomcat等基础环境。<br><br>
+2.项目导入idea，修改/src/main/resources/properties/jdbc.properties配置文件信息，将数据库连接改成你本地的数据库。<br><br>
+3.修改/src/test/resources/generatorConfig.properties配置文件，此配置文件为代码生成器配置文件，具体修改内容请看注释。<br><br>
 4.确保配置文件无误后，运行/src/test/java/com/codegen/main/CodeGeneratorMain.java类,如控制台打印如下信息，那么说明代码生成成功。
 ![](https://www.yiyuen.com/file/view/1601)
-<br>
+<br><br>
 5.在生成的mapperxml文件夹中，增加如下查询代码：
-  <select id="findPageList" parameterType="java.util.Map" resultType="map">select * from 生成的表名</select>
-  <br>
-6.启动项目，访问路径http://127.0.0.1:8080/xxx/page.shtml 即可看到增删改查的效果！<br>
-7.项目遇到任何问题，启动不了的同学请联系我，我会提供相应支持。<br>
+  ![](https://www.yiyuen.com/file/view/1603)
+  <br><br>
+6.启动项目，访问路径http://127.0.0.1:8080/xxx/page.shtml 即可看到增删改查的效果！<br><br>
+7.项目遇到任何问题，启动不了的同学请联系我，我会提供相应支持。<br><br>
 QQ:971886506 <br>
 WeChat:zwj971886506 <br>
 Email:zhangwenjunp@126.com<br>
