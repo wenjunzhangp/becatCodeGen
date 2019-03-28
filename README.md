@@ -8,18 +8,17 @@
 ![](https://www.yiyuen.com/file/view/1601)
 <br>
 5.在生成的mapperxml文件夹中，增加如下查询代码：
-  <select id="findPageList" parameterType="java.util.Map" resultType="map">
-    select * from 生成的表名
-  </select><br>
+  <select id="findPageList" parameterType="java.util.Map" resultType="map">select * from 生成的表名</select>
+  <br>
 6.启动项目，访问路径http://127.0.0.1:8080/xxx/page.shtml 即可看到增删改查的效果！<br>
-7.项目遇到任何问题，启动不了的同学请联系我，我会提供相应支持。
+7.项目遇到任何问题，启动不了的同学请联系我，我会提供相应支持。<br>
 QQ:971886506 <br>
 WeChat:zwj971886506 <br>
 Email:zhangwenjunp@126.com<br>
-8.可能遇到的错误:
-  1.代码没有生成到项目文件中，确认你generatorConfig.properties配置文件中project.file.path的配置，一定要确保和你项目同路径，否则代码会生成到磁盘其他路径特别注意！！！
-  2.项目读取不到generatorConfig.properties和properties文件夹下的配置文件，确认你maven是否配置了打包过滤，编译后的文件中是否存在这些配置文件
-  3.未在生成的mapperxml增加查询语句，则控制台会报错,分页列表也无效果
+8.可能遇到的错误:<br>
+  1.代码没有生成到项目文件中，确认你generatorConfig.properties配置文件中project.file.path的配置，一定要确保和你项目同路径，否则代码会生成到磁盘其他路径特别注意！！！<br>
+  2.项目读取不到generatorConfig.properties和properties文件夹下的配置文件，确认你maven是否配置了打包过滤，编译后的文件中是否存在这些配置文件<br>
+  3.未在生成的mapperxml增加查询语句，则控制台会报错,分页列表也无效果<br>
 ## 二.未来版本<br>
   下一步会把Bootstrap、ElementUI主流的前端框架增删改查demo集成到项目中，后续会考虑代码生成器和vue、react集成，支持更多的UI框架，适应多种公司开发场景应用。
 <br>
